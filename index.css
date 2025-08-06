@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: PlusJakartaSans;
+    color: black;
+}
+
+@font-face {
+    font-family: 'PlusJakartaSansItalic';
+    src: url('assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PlusJakartaSans';
+    src: url('assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DCECF2;
+}
+
+main {
+    min-height: 550px;
+    width: 75%;
+    height: 60%;
+    min-width: 700px;
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: white;
+
+}
+
+#conteiner-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#conteiner-form-info {
+    width: 85%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#conteiner-header-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+#conteiner-header-form>h2 {
+    color: #143340;
+}
+
+#conteiner-header-form>button {
+    padding-top: 10px;
+    background-color: transparent;
+    border: none;
+    color: #143340;
+}
+
+#conteiner-header-form>button:hover {
+    text-decoration: underline;
+}
+
+.label-form {
+    font-size: .85rem;
+    font-weight: bold;
+    color: rgba(83, 110, 119, 0.74);
+}
+
+.input-form {
+    height: 50px;
+    width: 100%;
+    margin-top: 8px;
+    border-radius: 5px;
+    border: 2px solid rgb(163, 173, 177);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.input-form:hover {
+    border: 2px solid #D3D930;
+}
+
+.input-form:focus-within {
+    border: 2px solid #D3D930;
+}
+
+.beside-input {
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background-color: #DCECF2;
+    color: #366c85;
+    font-weight: bolder;
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 10px;
+    padding-left: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #143340;
+    font-size: 1.0rem;
+}
+
+.input:-webkit-autofill {
+    font-size: 1rem;
+    background-color: white !important;
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    -webkit-text-fill-color: #000 !important;
+}
+
+.input:focus {
+    border: none;
+    outline: none;
+}
+
+.input:hover {
+    cursor: pointer;
+}
+
+.input-form:has(.input:focus) .beside-input {
+    background-color: #D3D930;
+    color: #143340;
+}
+
+#conteiner-form-term-rate {
+    width: 100%;
+    display: flex;
+    gap: 25px;
+}
+
+#conteiner-form-mortgate-type {
+    width: 100%;
+}
+
+.checkbox-form:hover {
+    border-color: #D3D930;
+    cursor: pointer;
+}
+
+#input-checkbox-checked {
+    background-color: #fcfde3;
+    border-color: #D3D930;
+}
+
+.checkbox-mortgage {
+    width: 1.3em;
+    height: 1.3em;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 2px solid #8e9aa0;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox-mortgage:checked {
+    border: 2px solid #D3D930;
+    outline: 2px solid white;
+    outline-offset: -4px;
+    background-color: #D3D930;
+
+}
+
+.martgate-type {
+    width: 88%;
+    display: flex;
+    align-items: center;
+}
+
+.txt-required {
+    color: hsl(4, 69%, 50%);
+    margin: 8px 0;
+    font-size: .75rem;
+    display: none;
+}
+
+#btn-submit {
+    width: 70%;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #D3D930;
+    border: none;
+    font-weight: bolder;
+    color: #143340;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 0;
+    min-width: 255px;
+}
+
+#btn-submit:hover {
+    cursor: pointer;
+}
+
+#btn-submit:disabled {
+    background-color: #e7eb8c;
+    cursor: not-allowed;
+}
+
+#conteiner-payment-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #143340;
+    width: 50%;
+    height: 100%;
+    border-radius: 0 20px 20px 50px;
+}
+
+#conteiner-img {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+}
+
+#conteiner-img>img {
+    width: 40%;
+    min-width: 200px;
+}
+
+#conteiner-img>h2 {
+    color: white;
+    font-size: 1.2rem;
+}
+
+#conteiner-img>p {
+    color: rgba(255, 255, 255, 0.589);
+    font-size: .8rem;
+    padding: 0 20px;
+}
+
+#conteiner-payment {
+    height: 85%;
+    width: 85%;
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    text-align: center;
+    justify-content: start;
+    gap: 25px;
+    text-align: left;
+}
+
+#conteiner-payment>h2 {
+    color: white;
+}
+
+#conteiner-payment>p {
+    width: 100%;
+    text-align: left;
+    color: rgba(197, 216, 223, 0.74);
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+#conteiner-payment-values {
+    width: 100%;
+    min-height: 50%;
+    background-color: rgb(5, 29, 37);
+    border-top: 4px solid #d3d930e7;
+    border-radius: 10px;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#container-monthly-repayments {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#container-monthly-repayments>p {
+    font-size: .85rem;
+    color: rgba(197, 216, 223, 0.74);
+}
+
+#container-monthly-repayments>h1 {
+    color: #D3D930;
+    font-size: 2.5em;
+}
+
+#conteiner-total-repayments {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#conteiner-total-repayments>h1 {
+    font-size: 1.2rem;
+    color: white;
+}
+
+#conteiner-total-repayments>p {
+    font-size: .85rem;
+    color: rgba(197, 216, 223, 0.74);
+}
+
+
+
+@media (max-width: 750px) {
+
+    html,
+    body {
+        width: 100dvw;
+        height: auto;
+    }
+
+    main {
+        width: 100%;
+        min-width: 300px;
+        height: auto;
+        flex-direction: column;
+        border-radius: 0px;
+        padding-top: 30px;
+        gap: 30px;
+    }
+
+    #conteiner-form {
+        width: 90%;
+    }
+
+    #conteiner-form-info {
+        width: 100%;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #conteiner-header-form {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .label-form {
+        font-size: .75rem;
+        min-width: none;
+    }
+
+    #conteiner-form-term-rate {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #btn-submit {
+        width: 100%;
+        height: 50px;
+        margin-top: 10px;
+    }
+
+    #conteiner-payment {
+        justify-content: center;
+        padding: 0 20px;
+        width: 100%;
+        height: 85%;
+        gap: 15px;
+    }
+
+    #conteiner-img {
+        padding: 20px 0;
+        gap: 8px;
+    }
+
+    #conteiner-img>img {
+        min-width: 150px;
+    }
+
+    #conteiner-img>h2 {
+        font-size: 1.4rem;
+    }
+
+    #conteiner-img>p {
+        font-size: .9rem;
+        padding: 0 30px;
+    }
+
+    #conteiner-payment-info {
+        width: 100%;
+        height: 400px;
+        border-radius: 0;
+    }
+
+}

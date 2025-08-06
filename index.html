@@ -1,61 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Mortgage repayment calculator</title>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
 
-  Mortgage Calculator
-  Clear All
+  <body>
+    <main>
 
-  Mortgage Amount
+      <div id="conteiner-form">
+        <form id="conteiner-form-info" onsubmit="calculateRepayments(event)">
+          <div id="conteiner-header-form">
+            <h2>Mortgage Calculator</h2>
+            <button onclick="clearForm()" type="button">Clear All</button>
+          </div>
 
-  Mortgage Term
+          <div style="width: 100%;">
+            <label class="label-form" for="input-amount">Mortgage Amount</label>
+            <div id="conteiner-input-amount" class="input-form">
+              <span id="beside-span-amount" class="beside-input">£</span>
+              <input autocomplete="off" id="input-amount" class="input only-number">
+            </div>
+            <p id="txt-required-amount" class="txt-required">This field is required</p>
+          </div>
 
-  Interest Rate
+          <div id="conteiner-form-term-rate">
+            <div>
+              <label class="label-form" for="input-term">Mortgage Term</label>
+              <div id="conteiner-input-term" class="input-form">
+                <input autocomplete="off" id="input-term" class="input form-term-rate only-number">
+                <span id="beside-span-term" class="beside-input">terms</span>
+              </div>
+              <p id="txt-required-term" class="txt-required">This field is required</p>
+            </div>
+            <div>
+              <label class="label-form" for="input-rate">Interest Rate</label>
+              <div id="conteiner-input-rate" class="input-form">
+                <input autocomplete="off" id="input-rate" class="input form-term-rate only-number">
+                <span id="beside-span-rate" class="beside-input">%</span>
+              </div>
+              <p id="txt-required-rate" class="txt-required">This field is required</p>
+            </div>
+          </div>
 
-  Mortgage Type
-  Repayment
-  Interest Only
+          <div style="width: 100%;">
 
-  Calculate Repayments
+            <label class="label-form">Mortgage Type</label>
+            <label class="input-form checkbox-form" onclick="markCheckBox('checkbox-repayment')">
+              <input autocomplete="off" value="checkbox-repayment" id="checkbox-repayment" class="checkbox-mortgage"
+                type="checkbox">
+              <p class="input martgate-type">Repayment</p>
+            </label>
 
-  <!-- Empty results start -->
+            <label class="input-form checkbox-form" onclick="markCheckBox('checkbox-interest')">
+              <input autocomplete="off" value="checkbox-interest" id="checkbox-interest" class="checkbox-mortgage"
+                type="checkbox">
+              <p class="input martgate-type">Interest Only</p>
+            </label>
+            <p id="txt-required-type" class="txt-required">This field is required</p>
+          </div>
+          <button id="btn-submit" type="submit" disabled><img src="assets/images/icon-calculator.svg" alt=""> Calculate
+            Repayments</button>
 
-  Results shown here
+        </form>
+      </div>
 
-  Complete the form and click “calculate repayments” to see what 
-  your monthly repayments would be.
+      <div id="conteiner-payment-info">
 
-  <!-- Empty results end -->
+        <div id="conteiner-img">
+          <img src="assets/images/illustration-empty.svg" alt="">
+          <h2>Results shown here</h2>
+          <p>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+        </div>
 
-  <!-- Completed results start -->
+        <div id="conteiner-payment">
+          <h2>Your results</h2>
+          <p>Your results are shown below based on the information you provided. To adjust the results, edit the form
+            and click "calculate repayments" again</p>
+          <div id="conteiner-payment-values">
+            <div id="container-monthly-repayments">
+              <p>Your monthly repayments</p>
+              <h1 id="total-monthly-payment">£1,797.74000</h1>
+            </div>
+            <p style="height: 1px; width: 100%; border-bottom: 1px solid rgba(128, 128, 128, 0.425)" ;></p>
+            <div id="conteiner-total-repayments">
+              <p>Total you'll repay over the term</p>
+              <h1 id="total-term-payment">$539,322.94</h1>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  Your results
+    </main>
+    <script src="index.js"></script>
+  </body>
 
-  Your results are shown below based on the information you provided. 
-  To adjust the results, edit the form and click “calculate repayments” again.
-
-  Your monthly repayments
-
-  Total you'll repay over the term
-
-  <!-- Completed results end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
 </html>
