@@ -1,9 +1,16 @@
 # Mortgage Repayment Calculator
 
-Uma calculadora que lhe ajuda a estimar os pagamentos mensais de uma hipoteca, incluindo juros e amortização.
+Uma calculadora que ajuda a estimar os pagamentos mensais de uma hipoteca, incluindo juros e amortização.
 
 ## Acesse a página do projeto  
 [https://luanalbis.github.io/mortgage-repayment-calculator/](https://luanalbis.github.io/mortgage-repayment-calculator/)
+
+## Desenvolvimento
+
+- Validação em tempo real para garantir que os cálculos sejam feitos apenas com dados corretos.
+- Campos totalmente dinâmicos com feedback visual interativo.  
+- As cores mudam de acordo com a interação:  
+- O botão de cálculo só é habilitado quando todos os campos possuem valores válidos.  
 
 ## Sobre o desafio
 
